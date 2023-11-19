@@ -9,7 +9,7 @@ void bst_insert(btNode* bst_root, int newNode)
 // write definition for bst_remove here
 bool bst_remove(btNode* bst_root, int target)
 {
-
+	return false;
 }
 
 // write definition for bst_remove_max here
