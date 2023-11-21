@@ -40,7 +40,7 @@ int bst_size(btNode* bst_root);
 //       data that exists in more general/real-world situations.)
 
 // write prototype for bst_insert here
-void bst_insert(btNode* bst_root, int newInt);
+void bst_insert(btNode*& bst_root, int newInt);
 
 // pre:  bst_root is root pointer of a binary search tree (may be 0 for
 //       empty tree)
@@ -50,7 +50,7 @@ void bst_insert(btNode* bst_root, int newInt);
 //       tree, then the tree is unchanged, and the function returns false.
 
 // write prototype for bst_remove here
-bool bst_remove(btNode* bst_root, int target);
+bool bst_remove(btNode*& bst_root, int target);
 
 // pre:  bst_root is root pointer of a non-empty binary search tree
 // post: The largest item in the binary search tree has been removed, and
@@ -60,7 +60,7 @@ bool bst_remove(btNode* bst_root, int target);
 
 
 // write prototype for bst_remove_max here
-void bst_remove_max(btNode* bst_root);
+void bst_remove_max(btNode*& bst_root, int& data);
 
 
 #endif
