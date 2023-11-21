@@ -14,7 +14,7 @@ void bst_insert(btNode*& bst_root, int newNode)
 	}
 	//Create cursor for tree traversal
 
-	btNode* cursor = new btNode;
+	btNode* cursor = bst_root;
 
 	while (cursor != 0)
 	{
@@ -29,7 +29,7 @@ void bst_insert(btNode*& bst_root, int newNode)
 				//Empty spot for new node found!
 				cursor->left = new btNode;
 				cursor->left->data = newNode;
-				cursor->left->left = cursor->right->right = 0;
+				cursor->left->left = cursor->left->right = 0;
 				return;
 			}
 			else {//No empty spot found
@@ -42,7 +42,7 @@ void bst_insert(btNode*& bst_root, int newNode)
 			//If the cursor data is less than the target data
 			// then insert on the right side
 
-			if (cursor->data == 0)
+			if (cursor->right == 0)
 			{
 				//Empty spot for new node found
 				cursor->right = new btNode;
@@ -111,7 +111,6 @@ bool bst_remove(btNode*& bst_root, int target)
 			delete oldBSTRoot;
 		}
 		return true;
-
 	}
 }
 
